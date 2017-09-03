@@ -15,3 +15,6 @@ http://opiece.me/2016/03/12/concise-to-next/（next主题）
 http://opiece.me/2015/04/09/hexo-guide-2/
 http://wuchong.me/blog/2014/01/17/use-github-to-manage-hexo-source/
 
+更新指南：
+先在此项目上利用hexo命令，创建文章，然后hexo server看看效果。可以的话，执行
+hexo deploy 将.deploy_git提交到qianhongxin.github.io仓库中，然后子啊xifengblog中commit，然后将修改提交到远程xifengblog中。
