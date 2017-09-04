@@ -10,6 +10,10 @@ edit my github.io blog
 http://crazymilk.github.io/2015/12/28/GitHub-Pages-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more
 
 http://opiece.me/2016/03/12/concise-to-next/（next主题）
+next主题：
+http://theme-next.iissnan.com/getting-started.html
+
+http://opiece.me/2016/03/12/concise-to-next/
 
 使用：
 http://opiece.me/2015/04/09/hexo-guide-2/
