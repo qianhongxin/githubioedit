@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Java," />
 
 
 
@@ -95,16 +95,18 @@
 
 
 
-<meta name="description" content="岁月静好！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="xifeng&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="热替换原理现在已经有各种智能的IDE可以为我们生成jar包，war包，ear包，甚至带上了自动替换，部署的功能。但一定会有那么些时候，我们需要修改或是替换jar包，war包，ear包中的某个文件而不是整个重新生成。JDK为我们提供了一些命令让我们可以直接修改jar包，war包，ear包中的某个文件，而不需要重新生成。（jar包，war包，ear包本质上都是zip包或称为压缩包） 热替换适用场景例如">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JDK热替换功能">
+<meta property="og:url" content="http://yoursite.com/2016/11/05/JDK热替换功能/index.html">
 <meta property="og:site_name" content="xifeng&#39;s blog">
-<meta property="og:description" content="岁月静好！">
+<meta property="og:description" content="热替换原理现在已经有各种智能的IDE可以为我们生成jar包，war包，ear包，甚至带上了自动替换，部署的功能。但一定会有那么些时候，我们需要修改或是替换jar包，war包，ear包中的某个文件而不是整个重新生成。JDK为我们提供了一些命令让我们可以直接修改jar包，war包，ear包中的某个文件，而不需要重新生成。（jar包，war包，ear包本质上都是zip包或称为压缩包） 热替换适用场景例如">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-04T17:36:45.734Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xifeng&#39;s blog">
-<meta name="twitter:description" content="岁月静好！">
+<meta name="twitter:title" content="JDK热替换功能">
+<meta name="twitter:description" content="热替换原理现在已经有各种智能的IDE可以为我们生成jar包，war包，ear包，甚至带上了自动替换，部署的功能。但一定会有那么些时候，我们需要修改或是替换jar包，war包，ear包中的某个文件而不是整个重新生成。JDK为我们提供了一些命令让我们可以直接修改jar包，war包，ear包中的某个文件，而不需要重新生成。（jar包，war包，ear包本质上都是zip包或称为压缩包） 热替换适用场景例如">
 
 
 
@@ -134,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/11/05/JDK热替换功能/"/>
 
 
 
 
 
-  <title>xifeng's blog</title>
+  <title>JDK热替换功能 | xifeng's blog</title>
   
 
 
@@ -159,8 +161,7 @@
     
   
 
-  <div class="container sidebar-position-right 
-  page-home">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -263,9 +264,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -295,9 +296,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/11/05/JDK热替换功能/" itemprop="url">JDK热替换功能</a></h1>
+          <h1 class="post-title" itemprop="name headline">JDK热替换功能</h1>
         
 
         <div class="post-meta">
@@ -347,9 +346,7 @@
       
 
       
-        
-          
-            <h3 id="热替换原理"><a href="#热替换原理" class="headerlink" title="热替换原理"></a>热替换原理</h3><p>现在已经有各种智能的IDE可以为我们生成jar包，war包，ear包，甚至带上了自动替换，部署的功能。但一定会有那么些时候，我们需要修改或是替换jar包，war包，ear包中的某个文件而不是整个重新生成。JDK为我们提供了一些命令让我们可以直接修改jar包，war包，ear包中的某个文件，而不需要重新生成。（jar包，war包，ear包本质上都是zip包或称为压缩包）</p>
+        <h3 id="热替换原理"><a href="#热替换原理" class="headerlink" title="热替换原理"></a>热替换原理</h3><p>现在已经有各种智能的IDE可以为我们生成jar包，war包，ear包，甚至带上了自动替换，部署的功能。但一定会有那么些时候，我们需要修改或是替换jar包，war包，ear包中的某个文件而不是整个重新生成。JDK为我们提供了一些命令让我们可以直接修改jar包，war包，ear包中的某个文件，而不需要重新生成。（jar包，war包，ear包本质上都是zip包或称为压缩包）</p>
 <h3 id="热替换适用场景"><a href="#热替换适用场景" class="headerlink" title="热替换适用场景"></a>热替换适用场景</h3><p>例如，将war包部署到生产环境的服务器上。此时如果需要更改war包中的配置文件时，只需要用jdk提供的命令进行修改即可，无需再到开发工具中修改后重新打包上传，提高效率。</p>
 <h3 id="热替换工具"><a href="#热替换工具" class="headerlink" title="热替换工具"></a>热替换工具</h3><p>用到的工具是jar command，这是jdk自带的工具。其中，我们用到的命令主要是以下几个：</p>
 <table>
@@ -404,8 +401,6 @@
 <p>(2) 修改application.properties配置文件，利用jar -uvf manager.war WEN-INF/classes/config/application.properties将修改后的配置文件信息更新到manager.war中。得到的manager.war即是最新的war。</p>
 <p>参考链接：<a href="http://blog.csdn.net/u013613428/article/details/51669882" target="_blank" rel="external">http://blog.csdn.net/u013613428/article/details/51669882</a></p>
 
-          
-        
       
     </div>
     
@@ -415,19 +410,49 @@
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="xifeng Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -437,10 +462,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -448,6 +474,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -468,8 +498,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -556,6 +595,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#热替换原理"><span class="nav-number">1.</span> <span class="nav-text">热替换原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#热替换适用场景"><span class="nav-number">2.</span> <span class="nav-text">热替换适用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#热替换工具"><span class="nav-number">3.</span> <span class="nav-text">热替换工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#热替换示例"><span class="nav-number">4.</span> <span class="nav-text">热替换示例</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -681,6 +736,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
 
   
 
