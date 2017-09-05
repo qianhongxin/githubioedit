@@ -3,6 +3,8 @@ title: JDK热替换功能
 date: 2016-11-05 01:11:07
 tags: 
      - Java
+categories:
+     - 部署
 ---
 
 ### 热替换原理
@@ -37,29 +39,31 @@ tags:
 
 **1. 利用jar -tvf manager.war列出该war包中的文件**
 
-1
+![](images/1.png)
 
 由于窗口高度问题，此处只显示了部分文件。从中可以看出，该命令执行后会将war包的所有文件一一显示出来，包括所在路径。
 
 **2. 执行jar -xvf manager.war命令，解压该war包。得到如下结果**
 
-![2]()
+![](images/2.png)
 
 上图中的红框中的META-INF,org,WEN-INF即为解压后的文件
 
 **3. 修改application.properties文件**
 
-找到application.properties文件，打开该文件，并将我们想要修改的内容进行修改。然后保存。application.properties文件的所在路径为下图红框中所标注的地方；![4]()
+![](images/3.png)
+
+找到application.properties文件，打开该文件，并将我们想要修改的内容进行修改。然后保存。application.properties文件的所在路径为下图红框中所标注的地方；
+
+![](images/4.png)
 
 **4.执行jar -uvf manager.war WEN-INF/classes/config/application.properties**
-
-![3]()
 
 上图中的红框部分即为执行过程
 
 **5.执行完上述执行后，即可得到最新的manager.war，如下图所示**
 
-**![5]()**
+**![](images/5.png)**
 
 **6.总结：以上就是修改一个war中的配置文件的过程，主要使用了两个指令**
 

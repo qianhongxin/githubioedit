@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: xifeng's blog
+title: Xifeng's Blog
 subtitle:
 description: 岁月静好！
 author: xifeng
@@ -81,3 +81,9 @@ deploy:
   repo: https://github.com/qianhongxin/qianhongxin.github.io.git
   branch: master
   message: xifengs blog
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
