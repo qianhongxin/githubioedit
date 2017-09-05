@@ -20,6 +20,12 @@ http://opiece.me/2016/03/12/concise-to-next/
 http://blog.csdn.net/xiongyangg/article/details/50756904
 
 每次使用hexo deploy发送到qianhongxin.github.io时，先将站点下的.deploy_git删除，然后再用那个命令
+如果提交没效果，使用：
+可执行下列的其中一个命令，让 Hexo 在生成完毕后自动部署网站，两个命令的作用是相同的。
+
+$ hexo generate --deploy
+$ hexo deploy --generate
+连接：https://hexo.io/zh-cn/docs/generating.html
 
 使用：
 http://opiece.me/2015/04/09/hexo-guide-2/
